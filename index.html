@@ -1,0 +1,77 @@
+---
+title: "Delicious baked goods and other eats made with love"
+layout: default
+---
+<header class="section">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col text-center">
+                <h3>Delicious baked goods and other eats, made with love,</h3>
+                <img src="{{'assets/images/logo.png' | relative_url }}" alt="Trish's Treats">
+                <br>
+                <a href="#order_form" class="btn btn-outline-light cta" data-toggle="modal" data-target="#order_modal">Place an Order</a>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav justify-content-center mx-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#about">Our Bake Shop</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#treats">Treats</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">Order Form</a>
+            </li>
+        </ul>
+    </div>
+</nav> -->
+<div id="about" class="section">
+    <div class="container">
+        <h1 class="text-center section-title">About our bake shop</h1>
+        <p class="text-center lead">Hi I'm Trish! Thank you for visting my online bake shop! My love for creating yummy treats in my kitchen is surpassed only by the people that love to eat them! Everything I make is made by hand, made to order, and made with love to taste great (this isn't health food). Please view some of my specialties, and use my order form to treat yourself, family and friends. If you're looking for something custom, let me know in the <strong>order details</strong> portion of the order form! Thank you and happy eating!</p>
+    </div>
+</div>
+<div id="treats" class="section">
+    <div class="container">
+        <h1 class="text-center section-title">Our Treats</h1>
+        <div class="row">
+            <div class="col mx-auto">
+                <ul class="nav nav-pills nav-fill" id="treats-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="sweets-tab" data-toggle="tab" href="#sweets" role="tab" aria-controls="sweets" aria-selected="true">Sweets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="oils-tab" data-toggle="tab" href="#oils" role="tab" aria-controls="oils" aria-selected="false">Oils</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="heats-tab" data-toggle="tab" href="#heats" role="tab" aria-controls="heats" aria-selected="false">Heats</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col tab-content">
+                <div class="treat-list tab-pane fade show active" id="sweets" role="tabpanel" aria-labelledby="sweets-tab">
+                    {% include sweets.html %}
+                </div>
+                <div class="treat-list tab-pane fade" id="oils" role="tabpanel" aria-labelledby="oils-tab">
+                    {% include oils.html %}
+                </div>
+                <div class="treat-list tab-pane fade" id="heats" role="tabpanel" aria-labelledby="heats-tab">
+                    {% include heats.html %}
+                </div>
+            </div> 
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-6"><a href="#order_form" class="btn btn-lg btn-cta btn-block" data-toggle="modal" data-target="#order_modal">Order Form</a></div>
+        </div>
+    </div>
+</div>

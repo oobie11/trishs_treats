@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-sm-10 mx-auto">
+        <p class="lead text-center">Our Heats</p>
+    </div>
+    {% assign heats = site.data.treats | where: "type", "heat" %}
+    {% for item in heats %}
+        {% include treat.html %}
+    {% endfor %}
+    <div class="col-sm-3 treat">
+        <img src="{{'assets/images/treats/treat_placeholder.jpg' | relative_url }}" class="img-fluid img-thumbnail" alt="Trish's Heats">
+        <h5 class="title">Trish's Heats</h5>
+        <p class="description">Our hot sauces and salsa will be listed soon!!</p>
+    </div>
+</div>

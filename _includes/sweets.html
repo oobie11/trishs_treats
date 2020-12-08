@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-sm-10 mx-auto">
+        <p class="lead text-center">Our Sweets</p>
+    </div>
+    {% assign sweets = site.data.treats | where: "type", "sweet" %}
+    {% for item in sweets %}
+        {% include treat.html %}
+    {% endfor %}
+    <div class="col-sm-3 treat">
+        <img src="{{'assets/images/treats/treat_placeholder.jpg' | relative_url }}" class="img-fluid img-thumbnail" alt="More coming soon!">
+        <h5 class="title">More coming soon!</h5>
+        <p class="description">We are always creating new treats! Keep checking back for more!</p>
+    </div>
+</div>

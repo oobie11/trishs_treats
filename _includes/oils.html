@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-sm-10 mx-auto">
+        <p class="lead text-center">Our Oils</p>
+    </div>
+    {% assign oils = site.data.treats | where: "type", "oil" %}
+    {% for item in oils %}
+        {% include treat.html %}
+    {% endfor %}
+    <div class="col-sm-3 treat">
+        <img src="{{'assets/images/treats/treat_placeholder.jpg' | relative_url}}" class="img-fluid img-thumbnail" alt="More coming soon!">
+        <h5 class="title">Trish's Oils</h5>
+        <p class="description">Our oils are will be listed soon!!</p>
+    </div>
+</div>

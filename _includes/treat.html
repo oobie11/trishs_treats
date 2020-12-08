@@ -1,0 +1,5 @@
+<div class="col-sm-3 treat">
+    <img src="{{ 'assets/images/treats/' | append: item.thumb_url | relative_url }}" class="img-fluid img-thumbnail" alt="<?php print $treat['title'];?>">
+    <h5 class="title">{{item.name}}</h5>
+    <p class="description">{{item.description}}</p>
+</div>

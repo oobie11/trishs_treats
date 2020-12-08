@@ -1,0 +1,66 @@
+<footer>
+  <div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					&copy 2018 - {{ site.time | date: "%Y" }} <a href="#intro" class="scroll-to"><strong class="display-font h4">Trish's Treats</strong></a>
+          <p class="wevelo">Site & logo designed with love by</p>
+          <a href="http://www.wevelo.com" target="_blank"><img src="../assets/images/wevelo_byline.png"/></a>
+				</div>
+			</div>
+		</div>
+</footer>
+<!-- Order Form Modal -->
+<div class="modal fade" id="order_modal" tabindex="-1" role="dialog" aria-labelledby="order_modal_label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="order_modal_label">Place Your Order</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="../order.php" method="post">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter your email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="e.g. 831-222-2222">
+        </div>
+        <div class="form-group">
+            <label for="address">Street Address</label>
+            <small id="addressHelp" class="form-text text-muted">The address you want your order shipped to.</small>
+            <input type="text" class="form-control" id="address" name="address" aria-describedby="addressHelp" placeholder="Enter your street address">
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" name="city" placeholder="e.g. Monterey">
+        </div>
+        <div class="row form-group">
+            <div class="col">
+                <label for="state">State</label>
+                <input type="text" class="form-control" id="state" name="state" placeholder="e.g. CA">
+            </div>
+            <div class="col">
+                <label for="zip">Zip</label>
+                <input type="text" class="form-control" id="zip" name="zip" placeholder="e.g. 93924">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="details">Order Details</label>
+            <textarea class="form-control" id="details" name="details" rows="3" placeholder="Enter the items you wish to order here and include any custom requirements you may have."></textarea>
+            <input type="text" name="occupation" class="d-none">
+        </div>
+        <button type="submit" name="submit" class="btn btn-primary">Place Order</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
